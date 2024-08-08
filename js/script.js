@@ -54,23 +54,26 @@ const nav = document.querySelector(".nav"),
             }
         }
     }
-    document.querySelector(".hire-me").addEventListener("click", function(){
-        const sectionIndex = this.getAttribute("data-section-index");
-        showSection(this);
-        updateNav(this);
-        removeBackSection();
-        addBackSection(sectionIndex);
-    })
+    // document.querySelector(".hire-me").addEventListener("click", function(){
+    //     const sectionIndex = this.getAttribute("data-section-index");
+    //     showSection(this);
+    //     updateNav(this);
+    //     removeBackSection();
+    //     addBackSection(sectionIndex);
+    // })
     const navTogglerBtn = document.querySelector(".nav-toggler"),
         aside = document.querySelector(".aside");
-        navTogglerBtn.addEventListener("click", () =>
-        {
-            asideSectionTogglerBtn();
-        })
-        function asideSectionTogglerBtn(){
-            aside.classList.toggle("open");
-            navTogglerBtn.classList.toggle("open");
-            for(let i=0; i<totalSection; i++){
-                allSection[i].classList.toggle("open");
-            }
+    navTogglerBtn.addEventListener("click", () =>
+    {
+        asideSectionTogglerBtn();
+    })
+    function asideSectionTogglerBtn(){
+        aside.classList.toggle("open");
+        navTogglerBtn.classList.toggle("open");
+        for(let i=0; i<totalSection; i++){
+            allSection[i].classList.toggle("open");
         }
+        console.log('aside classes:', aside.classList);
+    console.log('navTogglerBtn classes:', navTogglerBtn.classList);
+}
+    
